@@ -48,7 +48,7 @@ func Json() {
 	var dataArray []User
 	err = json.Unmarshal([]byte(jsonArrayString), &dataArray)
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Println(err)
 		return
 	}
 
@@ -59,7 +59,7 @@ func Json() {
 	var object = []User{{"john doe", 29}, {"doe john", 23}}
 	var newJsonData, newErr = json.Marshal(object)
 	if newErr != nil {
-		fmt.Println(err.Error())
+		fmt.Println(err)
 		return
 	}
 	var newJsonString = string(newJsonData)
